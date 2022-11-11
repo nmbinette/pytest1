@@ -19,7 +19,7 @@ def to_the_cloud(file_name, bucket, object_name=None):
     TEST_BUCKET = "comp630-m1-f21-proftim"
 
     # Upload the file
-    s3_client = boto3.Session(profile_name='default').client('s3')
+    s3_client = boto3.Session(profile_name='nmb1056').client('s3')
     try:
         response = s3_client.upload_file(file_name, bucket, object_name)
         print(f'Upload Response: {response}')
